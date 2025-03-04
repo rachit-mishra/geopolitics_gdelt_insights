@@ -1,11 +1,7 @@
-
----
-
 ## 4. Spark Streaming Module
 
 ### spark_streaming/spark_streaming.py
 
-```python
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col, udf
 from pyspark.sql.types import StructType, StructField, StringType, FloatType
