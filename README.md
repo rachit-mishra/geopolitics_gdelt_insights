@@ -62,6 +62,7 @@ It is recommended to create a virtual environment at the repository root to mana
       --conf spark.pyspark.driver.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \
       spark_streaming.py
 
+   note : update above conf paths to your .venv locations 
 
 Sample of streaming microbatches - - -
 ```
