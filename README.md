@@ -1,6 +1,6 @@
 # Geopolitics Streaming Project
 
-This repository demonstrates an end-to-end distributed streaming system using open source tools for real-time geopolitical event analysis. The system leverages:
+This project aims to demonstrate an end-to-end distributed streaming system using open source tools for real-time geopolitical event analysis. The system leverages:
 
 - **Kafka** for data ingestion.
 - **Spark Structured Streaming** for real-time processing.
