@@ -24,6 +24,22 @@ The source data is fetched from a free API (for example, GDELT or a similar geop
    git clone https://github.com/yourusername/geopolitics-streaming-project.git
    cd geopolitics-streaming-project
 
+2. **Run docker-compose**
+
+   ```bash
+   docker-compose up -d
+   # this will bring up kafka and zookeeper at 9092 and 2181 respectively
+
+3. **Run python kafka_producer** 
+
+4. **Run spark-streaming job 
+   ```bash
+   spark-submit \
+  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1,org.slf4j:slf4j-api:1.7.36 \
+  --conf spark.pyspark.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \ 
+  --conf spark.pyspark.driver.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \
+  spark_streaming.py
+
 
 Sample of streaming microbatches - - -
 ```
@@ -58,3 +74,5 @@ Batch: 2
 only showing top 20 rows
 
 ```
+
+ScyllaDB setup in progress.
