@@ -20,19 +20,39 @@ The source data is fetched from a free API (for example, GDELT or a similar geop
 
 ## Getting Started
 
-1. **Clone the Repository:**
+## Environment Setup
+
+It is recommended to create a virtual environment at the repository root to manage Python dependencies consistently.
+
+1. **Create a Virtual Environment**
+
+   In the repository root, run:
+
+   ```bash
+   python3 -m venv .venv
+   
+   Activate the env
+   mac : source .venv/bin/activate
+   windows : .venv\Scripts\activate
+
+
+2. **Clone the Repository:**
 
    ```bash
    git clone https://github.com/yourusername/geopolitics-streaming-project.git
    cd geopolitics-streaming-project
 
-2. **Run docker-compose**
+3. **Run docker-compose**
 
    ```bash
    docker-compose up -d
    # this will bring up kafka and zookeeper at 9092 and 2181 respectively
 
-3. **Run python kafka_producer** 
+4. **Run python kafka_producer** 
+   
+   ```bash
+   python kafka_producer.py
+
 
 4. **Run spark-streaming job 
    ```bash
