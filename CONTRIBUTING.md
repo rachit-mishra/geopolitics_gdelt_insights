@@ -1,6 +1,6 @@
 # Contributing to Geopolitics Streaming Project
 
-We welcome contributions from the community! Here’s how you can help:
+We welcome contributions from the community! Here’s how you can help: (kafka, spark streaming source code is up, the data being streamed from topics along with the transoformers models need to be massaged with scores etc. and written to a sink - ScyllaDB etc., which is WIP, meanwhile feel free to collaborate in any capacity)
 
 1. **Fork the Repository:**  
    Create your own fork and clone it locally.
