@@ -37,10 +37,10 @@ The source data is fetched from a free API (for example, GDELT or a similar geop
 4. **Run spark-streaming job 
    ```bash
    spark-submit \
-  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1,org.slf4j:slf4j-api:1.7.36 \
-  --conf spark.pyspark.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \ 
-  --conf spark.pyspark.driver.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \
-  spark_streaming.py
+      --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1,org.slf4j:slf4j-api:1.7.36 \
+      --conf spark.pyspark.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \ 
+      --conf spark.pyspark.driver.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \
+      spark_streaming.py
 
 
 Sample of streaming microbatches - - -
