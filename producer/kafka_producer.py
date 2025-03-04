@@ -3,14 +3,13 @@ import time
 import requests
 from kafka import KafkaProducer
 
-# Configure Kafka Producer
 producer = KafkaProducer(
     bootstrap_servers='localhost:9092',
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 
 # Define the search term and construct the GDELT API endpoint
-search_term = "trump"
+search_term = "ukrainewar"
 API_URL = f"https://api.gdeltproject.org/api/v2/doc/doc?query={search_term}&mode=ArtList&maxrecords=50&format=json"
 
 # Custom headers to mimic a browser
