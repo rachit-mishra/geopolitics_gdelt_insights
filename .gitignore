@@ -2,3 +2,6 @@
 venv/*
 checkpoint
 venv.zip
+analytics.log
+producer.log
+spark_streaming.log
