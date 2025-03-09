@@ -233,16 +233,136 @@ class GeopoliticsAnalytics:
             logger.error(f"Error in analyze_data: {e}", exc_info=True)
             return None
 
+    def get_performance_metrics(self):
+        """Get ScyllaDB performance metrics"""
+        try:
+            metrics = {
+                'write_latency': [],
+                'read_latency': [],
+                'throughput': 0,
+                'total_operations': 0
+            }
+            
+            # Measure write latency
+            start_time = time.time()
+            test_data = {
+                'url': 'test_url',
+                'processed_at': datetime.now(),
+                'title': 'test_title',
+                'seendate': str(datetime.now()),
+                'socialimage': 'test_image',
+                'domain': 'test_domain',
+                'language': 'en',
+                'sourcecountry': 'US',
+                'sentiment': 'POSITIVE'
+            }
+            
+            for _ in range(10):  # Test with 10 writes
+                write_start = time.time()
+                self.session.execute("""
+                    INSERT INTO articles (url, processed_at, title, seendate, socialimage,
+                                       domain, language, sourcecountry, sentiment)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                """, (test_data['url'] + str(_), test_data['processed_at'], test_data['title'],
+                     test_data['seendate'], test_data['socialimage'], test_data['domain'],
+                     test_data['language'], test_data['sourcecountry'], test_data['sentiment']))
+                metrics['write_latency'].append((time.time() - write_start) * 1000)  # Convert to ms
+            
+            # Measure read latency with different query patterns
+            read_patterns = [
+                "SELECT COUNT(*) FROM articles",
+                "SELECT * FROM articles WHERE url = %s LIMIT 1",
+                "SELECT * FROM articles WHERE processed_at > %s ALLOW FILTERING",
+                "SELECT sourcecountry, COUNT(*) FROM articles GROUP BY sourcecountry ALLOW FILTERING"
+            ]
+            
+            for query in read_patterns:
+                read_start = time.time()
+                if "WHERE url" in query:
+                    self.session.execute(query, (test_data['url'] + "0",))
+                elif "processed_at >" in query:
+                    self.session.execute(query, (datetime.now() - timedelta(hours=1),))
+                else:
+                    self.session.execute(query)
+                metrics['read_latency'].append((time.time() - read_start) * 1000)  # Convert to ms
+            
+            # Get table statistics
+            stats_query = self.session.execute("SELECT COUNT(*) FROM articles")
+            metrics['total_operations'] = stats_query.one()[0]
+            
+            # Calculate throughput (operations per second over the last hour)
+            hour_ago = datetime.now() - timedelta(hours=1)
+            throughput_query = self.session.execute("""
+                SELECT COUNT(*) FROM articles 
+                WHERE processed_at > %s ALLOW FILTERING
+            """, (hour_ago,))
+            ops_last_hour = throughput_query.one()[0]
+            metrics['throughput'] = ops_last_hour / 3600  # ops per second
+            
+            return metrics
+        except Exception as e:
+            logger.error(f"Error getting performance metrics: {e}")
+            return None
+
+    def analyze_performance(self):
+        """Analyze and log ScyllaDB performance metrics"""
+        try:
+            metrics = self.get_performance_metrics()
+            if not metrics:
+                return
+            
+            logger.info("\nScyllaDB Performance Analysis:")
+            logger.info("================================")
+            
+            # Write Performance
+            avg_write_latency = sum(metrics['write_latency']) / len(metrics['write_latency'])
+            logger.info(f"Write Latency (avg): {avg_write_latency:.2f}ms")
+            logger.info(f"Write Latency (p95): {sorted(metrics['write_latency'])[int(len(metrics['write_latency'])*0.95)]:.2f}ms")
+            
+            # Read Performance
+            avg_read_latency = sum(metrics['read_latency']) / len(metrics['read_latency'])
+            logger.info(f"Read Latency (avg): {avg_read_latency:.2f}ms")
+            logger.info(f"Read Latency (p95): {sorted(metrics['read_latency'])[int(len(metrics['read_latency'])*0.95)]:.2f}ms")
+            
+            # Throughput
+            logger.info(f"Current Throughput: {metrics['throughput']:.2f} ops/second")
+            logger.info(f"Total Records: {metrics['total_operations']:,}")
+            
+            # Storage Efficiency
+            storage_query = self.session.execute("SELECT table_name, cf_id FROM system_schema.tables WHERE keyspace_name='geopolitics'")
+            for row in storage_query:
+                table_id = row.cf_id
+                size_query = f"SELECT data_length FROM system.size_estimates WHERE keyspace_name='geopolitics' AND table_name='{row.table_name}'"
+                size_result = self.session.execute(size_query)
+                for size_row in size_result:
+                    if hasattr(size_row, 'data_length'):
+                        size_mb = size_row.data_length / (1024 * 1024)
+                        logger.info(f"Table Size: {size_mb:.2f} MB")
+                        if metrics['total_operations'] > 0:
+                            logger.info(f"Average Record Size: {(size_mb * 1024 * 1024 / metrics['total_operations']):.2f} bytes")
+            
+            return metrics
+        except Exception as e:
+            logger.error(f"Error analyzing performance: {e}")
+            return None
+
     def run_continuous_analysis(self, interval_seconds=10):
         try:
             while True:
                 logger.info("\n" + "="*50)
                 logger.info(f"Running analysis at {datetime.now()}")
+                
+                # Run regular analysis
                 result = self.analyze_data()
-                if result:
-                    logger.info(f"Analysis completed successfully")
+                
+                # Run performance analysis
+                perf_metrics = self.analyze_performance()
+                
+                if result and perf_metrics:
+                    logger.info("Analysis completed successfully")
                 else:
-                    logger.warning("Analysis returned no results")
+                    logger.warning("Analysis returned incomplete results")
+                    
                 logger.info("="*50 + "\n")
                 time.sleep(interval_seconds)
         except KeyboardInterrupt:
