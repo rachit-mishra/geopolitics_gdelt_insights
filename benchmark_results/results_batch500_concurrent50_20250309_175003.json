@@ -1,0 +1,12 @@
+{
+  "single_write_latency": 0.52,
+  "batch_write_latency": 0.31,
+  "read_latency": 18.98,
+  "concurrent_latency": 0.11,
+  "throughput": 16.35,
+  "test_name": "batch500_concurrent50",
+  "batch_size": 500,
+  "concurrent_ops": 50,
+  "duration": 30,
+  "timestamp": "2025-03-09T17:52:01.599771"
+}
