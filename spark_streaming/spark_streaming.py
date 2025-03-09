@@ -204,7 +204,10 @@ def process_batch(df, epoch_id):
                         cluster = Cluster(['localhost'], auth_provider=auth_provider, port=9042)
                         session = cluster.connect('geopolitics')
                         
-                        # Prepare the insert statement once
+                        # Prepare the statements
+                        check_stmt = session.prepare("""
+                            SELECT url FROM articles WHERE url = ? LIMIT 1
+                        """)
                         insert_stmt = session.prepare("""
                             INSERT INTO articles (
                                 url, processed_at, title, seendate, socialimage,
@@ -214,19 +217,39 @@ def process_batch(df, epoch_id):
                         
                         # Write each row
                         rows = df_final.collect()
+                        total_rows = len(rows)
+                        duplicates = 0
+                        successful = 0
+                        errors = 0
+                        
+                        logger.info(f"Processing {total_rows} records in batch {epoch_id}")
+                        
                         for row in rows:
                             try:
-                                session.execute(insert_stmt, (
-                                    row['url'], row['processed_at'], row['title'],
-                                    row['seendate'], row['socialimage'], row['domain'],
-                                    row['language'], row['sourcecountry'], row['sentiment']
-                                ))
-                                logger.info(f"Successfully wrote record with URL: {row['url']}")
+                                # Check if record exists
+                                existing = session.execute(check_stmt, (row['url'],))
+                                if not existing.one():
+                                    # Insert only if not exists
+                                    session.execute(insert_stmt, (
+                                        row['url'], row['processed_at'], row['title'],
+                                        row['seendate'], row['socialimage'], row['domain'],
+                                        row['language'], row['sourcecountry'], row['sentiment']
+                                    ))
+                                    successful += 1
+                                    logger.info(f"Successfully wrote record with URL: {row['url']}")
+                                else:
+                                    duplicates += 1
+                                    logger.info(f"Skipped duplicate record with URL: {row['url']}")
                             except Exception as e:
+                                errors += 1
                                 logger.error(f"Error writing record: {str(e)}")
                         
                         success = True
-                        logger.info(f"Successfully wrote batch {epoch_id} to ScyllaDB")
+                        logger.info(f"Batch {epoch_id} summary:")
+                        logger.info(f"- Total records: {total_rows}")
+                        logger.info(f"- Successfully written: {successful}")
+                        logger.info(f"- Duplicates skipped: {duplicates}")
+                        logger.info(f"- Errors: {errors}")
                         
                     except Exception as e:
                         retry_count += 1
