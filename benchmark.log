@@ -1,0 +1,347 @@
+2025-03-09 17:27:16,390 - INFO - Starting ScyllaDB Benchmark Suite
+2025-03-09 17:27:16,390 - INFO - Note: Using mock data for benchmark testing purposes
+2025-03-09 17:27:16,390 - INFO - 
+Running test configuration: batch50_concurrent20
+2025-03-09 17:27:16,390 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 50 --concurrent-ops 20 --interval 5 --duration 60
+2025-03-09 17:36:27,661 - INFO - Starting ScyllaDB Benchmark Suite
+2025-03-09 17:36:27,661 - INFO - Note: Using mock data for benchmark testing purposes
+2025-03-09 17:36:27,661 - INFO - 
+Running test 1/4
+2025-03-09 17:36:27,662 - INFO - Configuration: batch_size=50, concurrent_ops=20
+2025-03-09 17:36:27,662 - INFO - 
+Running test configuration: batch50_concurrent20
+2025-03-09 17:36:27,662 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:36:27,662 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 50 --concurrent-ops 20 --interval 2 --duration 30
+2025-03-09 17:36:27,664 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:36:29,668 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:36:31,671 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:36:33,677 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:36:35,679 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:36:37,685 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:36:39,687 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:36:41,693 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:36:43,699 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:36:45,699 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:36:47,704 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:36:49,709 - INFO - Test in progress: 22.0/30s
+2025-03-09 17:36:51,712 - INFO - Test in progress: 24.0/30s
+2025-03-09 17:36:53,718 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:36:55,721 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:42:59,089 - INFO - Starting ScyllaDB Benchmark Suite
+2025-03-09 17:42:59,089 - INFO - Note: Using mock data for benchmark testing purposes
+2025-03-09 17:42:59,089 - INFO - 
+Running test 1/4
+2025-03-09 17:42:59,089 - INFO - Configuration: batch_size=50, concurrent_ops=20
+2025-03-09 17:42:59,089 - INFO - 
+Running test configuration: batch50_concurrent20
+2025-03-09 17:42:59,089 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:42:59,089 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 50 --concurrent-ops 20 --interval 2 --duration 30
+2025-03-09 17:42:59,092 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:43:01,097 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:43:03,101 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:43:05,106 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:43:07,111 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:43:09,117 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:43:11,118 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:43:13,123 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:43:15,128 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:43:17,132 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:43:19,137 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:43:21,142 - INFO - Test in progress: 22.1/30s
+2025-03-09 17:43:23,148 - INFO - Test in progress: 24.1/30s
+2025-03-09 17:43:25,153 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:43:27,158 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:43:35,164 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:43:35,232 - INFO - Test batch50_concurrent20 completed. Results saved to benchmark_results/results_batch50_concurrent20_20250309_174259.json
+2025-03-09 17:43:40,237 - INFO - Completed test 1/4
+2025-03-09 17:43:40,237 - INFO - 
+Running test 2/4
+2025-03-09 17:43:40,237 - INFO - Configuration: batch_size=200, concurrent_ops=20
+2025-03-09 17:43:40,237 - INFO - 
+Running test configuration: batch200_concurrent20
+2025-03-09 17:43:40,237 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:43:40,237 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 200 --concurrent-ops 20 --interval 2 --duration 30
+2025-03-09 17:43:40,240 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:43:42,245 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:43:44,249 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:43:46,255 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:43:48,258 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:43:50,264 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:43:52,267 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:43:54,272 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:43:56,275 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:43:58,278 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:44:00,283 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:44:02,289 - INFO - Test in progress: 22.0/30s
+2025-03-09 17:44:04,293 - INFO - Test in progress: 24.1/30s
+2025-03-09 17:44:06,299 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:44:08,300 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:44:16,313 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:44:16,395 - INFO - Test batch200_concurrent20 completed. Results saved to benchmark_results/results_batch200_concurrent20_20250309_174259.json
+2025-03-09 17:44:21,400 - INFO - Completed test 2/4
+2025-03-09 17:44:21,400 - INFO - 
+Running test 3/4
+2025-03-09 17:44:21,400 - INFO - Configuration: batch_size=500, concurrent_ops=50
+2025-03-09 17:44:21,400 - INFO - 
+Running test configuration: batch500_concurrent50
+2025-03-09 17:44:21,401 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:44:21,401 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 500 --concurrent-ops 50 --interval 2 --duration 30
+2025-03-09 17:44:21,406 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:44:23,409 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:44:25,412 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:44:27,416 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:44:29,422 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:44:31,422 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:44:33,425 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:44:35,425 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:44:37,431 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:44:39,436 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:44:41,457 - INFO - Test in progress: 20.1/30s
+2025-03-09 17:44:43,458 - INFO - Test in progress: 22.1/30s
+2025-03-09 17:44:45,463 - INFO - Test in progress: 24.1/30s
+2025-03-09 17:44:47,464 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:44:49,466 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:44:57,476 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:44:57,568 - INFO - Test batch500_concurrent50 completed. Results saved to benchmark_results/results_batch500_concurrent50_20250309_174259.json
+2025-03-09 17:45:02,573 - INFO - Completed test 3/4
+2025-03-09 17:45:02,573 - INFO - 
+Running test 4/4
+2025-03-09 17:45:02,573 - INFO - Configuration: batch_size=50, concurrent_ops=100
+2025-03-09 17:45:02,573 - INFO - 
+Running test configuration: batch50_concurrent100
+2025-03-09 17:45:02,573 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:45:02,573 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 50 --concurrent-ops 100 --interval 2 --duration 30
+2025-03-09 17:45:02,576 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:45:04,579 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:45:06,585 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:45:08,588 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:45:10,592 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:45:12,597 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:45:14,600 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:45:16,605 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:45:18,609 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:45:20,613 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:45:22,618 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:45:24,623 - INFO - Test in progress: 22.0/30s
+2025-03-09 17:45:26,628 - INFO - Test in progress: 24.1/30s
+2025-03-09 17:45:28,628 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:45:30,634 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:45:38,651 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:45:38,753 - INFO - Test batch50_concurrent100 completed. Results saved to benchmark_results/results_batch50_concurrent100_20250309_174259.json
+2025-03-09 17:45:43,758 - INFO - Completed test 4/4
+2025-03-09 17:47:40,636 - INFO - Starting ScyllaDB Benchmark Suite
+2025-03-09 17:47:40,636 - INFO - Note: Using mock data for benchmark testing purposes
+2025-03-09 17:47:40,636 - INFO - 
+Running test 1/4
+2025-03-09 17:47:40,636 - INFO - Configuration: batch_size=50, concurrent_ops=20
+2025-03-09 17:47:40,636 - INFO - 
+Running test configuration: batch50_concurrent20
+2025-03-09 17:47:40,636 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:47:40,636 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 50 --concurrent-ops 20 --interval 2 --duration 30
+2025-03-09 17:47:40,639 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:47:42,643 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:47:44,648 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:47:46,649 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:47:48,653 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:47:50,655 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:47:52,661 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:47:54,666 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:47:56,668 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:47:58,673 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:48:00,678 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:48:02,683 - INFO - Test in progress: 22.0/30s
+2025-03-09 17:48:04,689 - INFO - Test in progress: 24.0/30s
+2025-03-09 17:48:06,690 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:48:08,696 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:48:16,709 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:48:16,716 - WARNING - Error parsing line '2025-03-09 17:48:16,357 - INFO - Single Write Performance:': could not convert string to float: ''
+2025-03-09 17:48:16,716 - WARNING - Error parsing line 'Batch Write Performance (per record):': could not convert string to float: ''
+2025-03-09 17:48:16,716 - WARNING - Error parsing line 'Read Performance:': could not convert string to float: ''
+2025-03-09 17:48:16,716 - WARNING - Error parsing line 'Concurrent Operations Performance:': could not convert string to float: ''
+2025-03-09 17:48:16,717 - INFO - Test batch50_concurrent20 completed. Results saved to benchmark_results/results_batch50_concurrent20_20250309_174740.json
+2025-03-09 17:48:21,722 - INFO - Completed test 1/4
+2025-03-09 17:48:21,722 - INFO - 
+Running test 2/4
+2025-03-09 17:48:21,722 - INFO - Configuration: batch_size=200, concurrent_ops=20
+2025-03-09 17:48:21,722 - INFO - 
+Running test configuration: batch200_concurrent20
+2025-03-09 17:48:21,722 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:48:21,722 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 200 --concurrent-ops 20 --interval 2 --duration 30
+2025-03-09 17:48:21,728 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:48:23,732 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:48:25,733 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:48:27,737 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:48:29,742 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:48:31,745 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:48:33,748 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:48:35,751 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:48:37,753 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:48:39,766 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:48:41,772 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:48:43,774 - INFO - Test in progress: 22.0/30s
+2025-03-09 17:48:45,779 - INFO - Test in progress: 24.1/30s
+2025-03-09 17:48:47,782 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:48:49,788 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:48:57,798 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:48:57,807 - WARNING - Error parsing line '2025-03-09 17:48:57,124 - INFO - Single Write Performance:': could not convert string to float: ''
+2025-03-09 17:48:57,807 - WARNING - Error parsing line 'Batch Write Performance (per record):': could not convert string to float: ''
+2025-03-09 17:48:57,807 - WARNING - Error parsing line 'Read Performance:': could not convert string to float: ''
+2025-03-09 17:48:57,807 - WARNING - Error parsing line 'Concurrent Operations Performance:': could not convert string to float: ''
+2025-03-09 17:48:57,808 - INFO - Test batch200_concurrent20 completed. Results saved to benchmark_results/results_batch200_concurrent20_20250309_174740.json
+2025-03-09 17:49:02,811 - INFO - Completed test 2/4
+2025-03-09 17:49:02,811 - INFO - 
+Running test 3/4
+2025-03-09 17:49:02,811 - INFO - Configuration: batch_size=500, concurrent_ops=50
+2025-03-09 17:49:02,811 - INFO - 
+Running test configuration: batch500_concurrent50
+2025-03-09 17:49:02,811 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:49:02,811 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 500 --concurrent-ops 50 --interval 2 --duration 30
+2025-03-09 17:49:02,815 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:49:04,820 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:49:06,823 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:49:08,827 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:49:10,830 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:49:12,835 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:49:14,836 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:49:16,842 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:49:18,842 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:49:20,847 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:49:22,848 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:49:24,849 - INFO - Test in progress: 22.0/30s
+2025-03-09 17:49:26,854 - INFO - Test in progress: 24.0/30s
+2025-03-09 17:49:28,856 - INFO - Test in progress: 26.0/30s
+2025-03-09 17:49:30,861 - INFO - Test in progress: 28.0/30s
+2025-03-09 17:49:38,875 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:49:38,883 - WARNING - Error parsing line '2025-03-09 17:49:38,500 - INFO - Single Write Performance:': could not convert string to float: ''
+2025-03-09 17:49:38,883 - WARNING - Error parsing line 'Batch Write Performance (per record):': could not convert string to float: ''
+2025-03-09 17:49:38,883 - WARNING - Error parsing line 'Read Performance:': could not convert string to float: ''
+2025-03-09 17:49:38,883 - WARNING - Error parsing line 'Concurrent Operations Performance:': could not convert string to float: ''
+2025-03-09 17:49:38,884 - INFO - Test batch500_concurrent50 completed. Results saved to benchmark_results/results_batch500_concurrent50_20250309_174740.json
+2025-03-09 17:49:43,889 - INFO - Completed test 3/4
+2025-03-09 17:49:43,889 - INFO - 
+Running test 4/4
+2025-03-09 17:49:43,889 - INFO - Configuration: batch_size=50, concurrent_ops=100
+2025-03-09 17:49:43,889 - INFO - 
+Running test configuration: batch50_concurrent100
+2025-03-09 17:49:43,889 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:49:43,889 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 50 --concurrent-ops 100 --interval 2 --duration 30
+2025-03-09 17:49:43,893 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:49:45,898 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:49:47,904 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:49:49,909 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:49:51,914 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:49:53,919 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:49:55,924 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:49:57,927 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:49:59,932 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:50:03,330 - INFO - Starting ScyllaDB Benchmark Suite
+2025-03-09 17:50:03,330 - INFO - Note: Using mock data for benchmark testing purposes
+2025-03-09 17:50:03,330 - INFO - 
+Running test 1/4
+2025-03-09 17:50:03,330 - INFO - Configuration: batch_size=50, concurrent_ops=20
+2025-03-09 17:50:03,330 - INFO - 
+Running test configuration: batch50_concurrent20
+2025-03-09 17:50:03,330 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:50:03,330 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 50 --concurrent-ops 20 --interval 2 --duration 30
+2025-03-09 17:50:03,334 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:50:05,337 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:50:07,339 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:50:09,345 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:50:11,347 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:50:13,352 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:50:15,358 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:50:17,363 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:50:19,369 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:50:21,375 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:50:23,380 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:50:25,384 - INFO - Test in progress: 22.1/30s
+2025-03-09 17:50:27,389 - INFO - Test in progress: 24.1/30s
+2025-03-09 17:50:29,395 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:50:31,397 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:50:39,415 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:50:39,425 - INFO - Successfully parsed all metrics
+2025-03-09 17:50:39,426 - INFO - Test batch50_concurrent20 completed. Results saved to benchmark_results/results_batch50_concurrent20_20250309_175003.json
+2025-03-09 17:50:44,431 - INFO - Completed test 1/4
+2025-03-09 17:50:44,431 - INFO - 
+Running test 2/4
+2025-03-09 17:50:44,431 - INFO - Configuration: batch_size=200, concurrent_ops=20
+2025-03-09 17:50:44,431 - INFO - 
+Running test configuration: batch200_concurrent20
+2025-03-09 17:50:44,431 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:50:44,432 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 200 --concurrent-ops 20 --interval 2 --duration 30
+2025-03-09 17:50:44,436 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:50:46,438 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:50:48,439 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:50:50,444 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:50:52,450 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:50:54,455 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:50:56,458 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:50:58,463 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:51:00,464 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:51:02,470 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:51:04,475 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:51:06,477 - INFO - Test in progress: 22.0/30s
+2025-03-09 17:51:08,480 - INFO - Test in progress: 24.0/30s
+2025-03-09 17:51:10,481 - INFO - Test in progress: 26.0/30s
+2025-03-09 17:51:12,486 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:51:20,506 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:51:20,515 - INFO - Successfully parsed all metrics
+2025-03-09 17:51:20,516 - INFO - Test batch200_concurrent20 completed. Results saved to benchmark_results/results_batch200_concurrent20_20250309_175003.json
+2025-03-09 17:51:25,517 - INFO - Completed test 2/4
+2025-03-09 17:51:25,518 - INFO - 
+Running test 3/4
+2025-03-09 17:51:25,518 - INFO - Configuration: batch_size=500, concurrent_ops=50
+2025-03-09 17:51:25,518 - INFO - 
+Running test configuration: batch500_concurrent50
+2025-03-09 17:51:25,518 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:51:25,518 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 500 --concurrent-ops 50 --interval 2 --duration 30
+2025-03-09 17:51:25,523 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:51:27,529 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:51:29,534 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:51:31,538 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:51:33,539 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:51:35,544 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:51:37,547 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:51:39,552 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:51:41,555 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:51:43,556 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:51:45,562 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:51:47,567 - INFO - Test in progress: 22.0/30s
+2025-03-09 17:51:49,568 - INFO - Test in progress: 24.0/30s
+2025-03-09 17:51:51,572 - INFO - Test in progress: 26.0/30s
+2025-03-09 17:51:53,572 - INFO - Test in progress: 28.0/30s
+2025-03-09 17:52:01,588 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:52:01,599 - INFO - Successfully parsed all metrics
+2025-03-09 17:52:01,600 - INFO - Test batch500_concurrent50 completed. Results saved to benchmark_results/results_batch500_concurrent50_20250309_175003.json
+2025-03-09 17:52:06,605 - INFO - Completed test 3/4
+2025-03-09 17:52:06,605 - INFO - 
+Running test 4/4
+2025-03-09 17:52:06,605 - INFO - Configuration: batch_size=50, concurrent_ops=100
+2025-03-09 17:52:06,605 - INFO - 
+Running test configuration: batch50_concurrent100
+2025-03-09 17:52:06,605 - INFO - Duration: 30s, Interval: 2s
+2025-03-09 17:52:06,605 - INFO - Executing command: python analytics/scylla_analytics.py --performance-mode --batch-size 50 --concurrent-ops 100 --interval 2 --duration 30
+2025-03-09 17:52:06,608 - INFO - Test in progress: 0.0/30s
+2025-03-09 17:52:08,613 - INFO - Test in progress: 2.0/30s
+2025-03-09 17:52:10,618 - INFO - Test in progress: 4.0/30s
+2025-03-09 17:52:12,622 - INFO - Test in progress: 6.0/30s
+2025-03-09 17:52:14,627 - INFO - Test in progress: 8.0/30s
+2025-03-09 17:52:16,630 - INFO - Test in progress: 10.0/30s
+2025-03-09 17:52:18,632 - INFO - Test in progress: 12.0/30s
+2025-03-09 17:52:20,641 - INFO - Test in progress: 14.0/30s
+2025-03-09 17:52:22,646 - INFO - Test in progress: 16.0/30s
+2025-03-09 17:52:24,652 - INFO - Test in progress: 18.0/30s
+2025-03-09 17:52:26,657 - INFO - Test in progress: 20.0/30s
+2025-03-09 17:52:28,659 - INFO - Test in progress: 22.1/30s
+2025-03-09 17:52:30,664 - INFO - Test in progress: 24.1/30s
+2025-03-09 17:52:32,669 - INFO - Test in progress: 26.1/30s
+2025-03-09 17:52:34,671 - INFO - Test in progress: 28.1/30s
+2025-03-09 17:52:42,686 - WARNING - Test exceeded duration limit. Terminating process...
+2025-03-09 17:52:42,695 - INFO - Successfully parsed all metrics
+2025-03-09 17:52:42,696 - INFO - Test batch50_concurrent100 completed. Results saved to benchmark_results/results_batch50_concurrent100_20250309_175003.json
+2025-03-09 17:52:47,697 - INFO - Completed test 4/4
+2025-03-09 17:52:47,699 - WARNING - Seaborn style not available, using default style
+2025-03-09 17:52:48,319 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 17:52:48,322 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 17:52:48,946 - INFO - Benchmark report generated: benchmark_results/benchmark_report_20250309_175003.md
+2025-03-09 17:52:48,946 - INFO - Performance plots saved: benchmark_results/benchmark_plots_20250309_175003.png

@@ -1,58 +1,61 @@
 version: '3'
+
 services:
   zookeeper:
-    image: 'bitnami/zookeeper:latest'
+    image: confluentinc/cp-zookeeper:7.3.0
     container_name: zookeeper
-    environment:
-      - ALLOW_ANONYMOUS_LOGIN=yes
     ports:
       - "2181:2181"
-    healthcheck:
-      test: ["CMD", "echo", "ruok", "|", "nc", "localhost", "2181"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - geopolitics_net
 
   kafka:
-    image: 'bitnami/kafka:latest'
+    image: confluentinc/cp-kafka:7.3.0
     container_name: kafka
-    environment:
-      - KAFKA_BROKER_ID=1
-      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - ALLOW_PLAINTEXT_LISTENER=yes
-      # Advertise the broker using localhost (or your machine's IP)
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
-      # Optional: Set listeners explicitly
-      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
     ports:
       - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     depends_on:
       - zookeeper
-    healthcheck:
-      test: ["CMD-SHELL", "kafka-topics.sh --list --bootstrap-server localhost:9092"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+    networks:
+      - geopolitics_net
 
   scylla:
-    image: 'scylladb/scylla:latest'
+    image: scylladb/scylla:5.2.0
     container_name: scylla
+    command: --smp 2 --memory 4G --overprovisioned 1 --api-address 0.0.0.0
     ports:
-      - "9042:9042"  # CQL
-      - "9160:9160"  # Thrift
-      - "9180:9180"  # JMX
-      - "10000:10000"  # REST API
+      - "9042:9042"   # CQL
+      - "9160:9160"   # Thrift
+      - "9180:9180"   # REST API
+      - "10000:10000" # Prometheus API
     volumes:
-      - scylla-data:/var/lib/scylla
-    command: --authenticator PasswordAuthenticator --authorizer CassandraAuthorizer
+      - scylla_data:/var/lib/scylla
     environment:
-      - SCYLLA_USER=cassandra
-      - SCYLLA_PASSWORD=cassandra
+      - SCYLLA_DEVELOPER_MODE=1
+      - SCYLLA_CLUSTER_NAME=geopolitics_cluster
+      - SCYLLA_SEEDS=scylla
     healthcheck:
-      test: ["CMD-SHELL", "nodetool status"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD-SHELL", "nodetool status | grep UN"]
+      interval: 30s
+      timeout: 10s
       retries: 5
+    networks:
+      - geopolitics_net
 
 volumes:
-  scylla-data:
+  scylla_data:
+    driver: local
+
+networks:
+  geopolitics_net:
+    driver: bridge
