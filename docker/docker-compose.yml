@@ -2,13 +2,20 @@ version: '3'
 services:
   zookeeper:
     image: 'bitnami/zookeeper:latest'
+    container_name: zookeeper
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
     ports:
       - "2181:2181"
+    healthcheck:
+      test: ["CMD", "echo", "ruok", "|", "nc", "localhost", "2181"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   kafka:
     image: 'bitnami/kafka:latest'
+    container_name: kafka
     environment:
       - KAFKA_BROKER_ID=1
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
@@ -21,3 +28,31 @@ services:
       - "9092:9092"
     depends_on:
       - zookeeper
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics.sh --list --bootstrap-server localhost:9092"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  scylla:
+    image: 'scylladb/scylla:latest'
+    container_name: scylla
+    ports:
+      - "9042:9042"  # CQL
+      - "9160:9160"  # Thrift
+      - "9180:9180"  # JMX
+      - "10000:10000"  # REST API
+    volumes:
+      - scylla-data:/var/lib/scylla
+    command: --authenticator PasswordAuthenticator --authorizer CassandraAuthorizer
+    environment:
+      - SCYLLA_USER=cassandra
+      - SCYLLA_PASSWORD=cassandra
+    healthcheck:
+      test: ["CMD-SHELL", "nodetool status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  scylla-data:

@@ -1,101 +1,143 @@
-# Geopolitics Streaming Project
+# Geopolitics GDELT Insights
 
-This project aims to demonstrate an end-to-end distributed streaming system using open source tools for real-time geopolitical event analysis. 
+A real-time geopolitical event analysis system that processes news articles from the GDELT Project, performs sentiment analysis, and provides insights into global events.
 
-The system leverages:
-
-- **Kafka** for data ingestion.
-- **Spark Structured Streaming** for real-time processing.
-- **Hugging Face Transformers** for AI-powered sentiment analysis.
-- **ScyllaDB** (or optionally, Parquet files with DuckDB) for data storage.
-
-The source data is fetched from a free API (for example, GDELT or a similar geopolitics news API).
-
-## Repository Structure
-
-- **producer/**: Contains the Kafka producer code that fetches data from the API and pushes it into Kafka.
-- **spark_streaming/**: Contains the Spark Structured Streaming job that processes the data, applies AI enrichment, and writes to the storage layer.
-- **docs/**: Documentation for the project architecture and setup instructions.
-- **docker/**: Docker configurations (e.g., docker-compose) for spinning up necessary services like Kafka and Zookeeper.
-
-## Getting Started
-
-## Environment Setup
-
-It is recommended to create a virtual environment at the repository root to manage Python dependencies consistently.
-
-1. **Create a Virtual Environment**
-
-   In the repository root, run:
-
-   ```bash
-   python3 -m venv .venv
-   
-   Activate the env
-   mac : source .venv/bin/activate
-   windows : .venv\Scripts\activate
-
-
-2. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/yourusername/geopolitics-streaming-project.git
-   cd geopolitics-streaming-project
-
-3. **Run docker-compose**
-
-   ```bash
-   docker-compose up -d
-   # this will bring up kafka and zookeeper at 9092 and 2181 respectively
-
-4. **Run python kafka_producer** 
-   
-   ```bash
-   python kafka_producer.py
-
-
-4. **Run spark-streaming job 
-   ```bash
-   spark-submit \
-      --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1,org.slf4j:slf4j-api:1.7.36 \
-      --conf spark.pyspark.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \ 
-      --conf spark.pyspark.driver.python=/Users/rachitmishra/Documents/personal/projs/geopolitics_gdelt_insights/.venv/bin/python3 \
-      spark_streaming.py
-
-   note : update above conf paths to your .venv locations 
-
-Sample of streaming microbatches - - -
-```
-04:43 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 2, writer: ConsoleWriter[numRows=20, truncate=true]] is committing.
--------------------------------------------
-Batch: 2
--------------------------------------------
-+--------------------+---------------------------------+----------------+--------+--------------+---------+
-|                 url|                            title|        seendate|language| sourcecountry|sentiment|
-+--------------------+---------------------------------+----------------+--------+--------------+---------+
-|https://news.yaho...|             Kimberly Guilfoyl...|20241227T001500Z| English| United States|      0.0|
-|https://www.yahoo...|             Kimberly Guilfoyl...|20241226T213000Z| English| United States|      0.0|
-|https://www.hltv....|             Forum thread : sl...|20241227T193000Z| English| United States|      0.0|
-|https://www.daily...|             Barron surprise c...|20241224T180000Z| English|United Kingdom|      0.0|
-|https://www.insig...|   정용진 , 트럼프 당선인과 10...|20241222T043000Z|  Korean|   South Korea|      0.0|
-|http://news.nate....|   정용진 ,  한국패싱  트럼프 ...|20241222T014500Z|  Korean| United States|      0.0|
-|https://news.mt.c...| 정용진  트럼프와 심도 깊은 대...|20241222T040000Z|  Korean|   South Korea|      0.0|
-|https://www.newsw...|             Toyota Joins Ford...|20241225T000000Z| English| United States|      0.0|
-|http://segye.com/...|   트럼프 만난 정용진 …  여러 ...|20241222T113000Z|  Korean|   South Korea|      0.0|
-|https://navbharat...|             Ivanka Trump Late...|20241222T154500Z|   Hindi|         India|      0.0|
-|https://www.bhask...|             Why Trump Wants G...|20241225T023000Z|   Hindi|         India|      0.0|
-|http://www.koreat...|   곧 취임하는데 … 트럼프 , 굿...|20241226T083000Z|  Korean|   South Korea|      0.0|
-|https://www.hanko...|   정용진 , 미국서 트럼프와 15...|20241222T014500Z|  Korean|   South Korea|      0.0|
-|http://segye.com/...|   양안 인식 드러낸 트럼프 …  ...|20241222T113000Z|  Korean|   South Korea|      0.0|
-|https://www.forbe...|             Trump Biggest Cab...|20241226T161500Z| English| United States|      0.0|
-|https://news.ifen...|美前国家安全顾问 ： 非常担心  ...|20241225T123000Z| Chinese|         China|      0.0|
-|https://sabq.org/...|               أنا قلق جدًا .....|20241224T183000Z|  Arabic|  Saudi Arabia|      0.0|
-|https://indianexp...|             Trump speech , Pa...|20241223T033000Z| English|         India|      0.0|
-|https://www.yahoo...|             Ford , General Mo...|20241224T133000Z| English| United States|      0.0|
-|https://www.liveh...|             Elon Musk to be B...|20241223T034500Z|   Hindi|         India|      0.0|
-+--------------------+---------------------------------+----------------+--------+--------------+---------+
-only showing top 20 rows
+## Architecture
 
 ```
+┌─────────────┐    ┌─────────┐    ┌──────────────┐    ┌──────────┐
+│ GDELT API   │ -> │ Kafka   │ -> │ Spark        │ -> │ ScyllaDB │
+│ (Producer)  │    │ Topic   │    │ Streaming    │    │          │
+└─────────────┘    └─────────┘    └──────────────┘    └──────────┘
+                                         │
+                                         v
+                                  ┌──────────────┐
+                                  │ Sentiment    │
+                                  │ Analysis     │
+                                  └──────────────┘
+```
 
-ScyllaDB setup in progress.
+## Prerequisites
+
+- Python 3.8+
+- Docker and Docker Compose
+- Required Python packages (auto-installed by startup script):
+  - kafka-python
+  - requests
+  - pyspark
+  - transformers
+  - cassandra-driver
+  - pandas
+
+## Quick Start
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd geopolitics_gdelt_insights
+```
+
+2. Start the system:
+```bash
+python startup.py --topic geopolitics_events --search "your_search_term"
+```
+
+3. Monitor analytics:
+```bash
+python analytics/scylla_analytics.py
+```
+
+4. To shut down:
+```bash
+python shutdown.py
+```
+
+## Components
+
+### 1. Data Ingestion (Producer)
+- Fetches articles from GDELT API every 30 seconds
+- Implements rate limiting and error handling
+- Publishes articles to Kafka topic
+
+### 2. Stream Processing
+- Spark Streaming job processes articles in real-time
+- Performs sentiment analysis using DistilBERT
+- Handles data transformation and enrichment
+- Ensures fault-tolerant processing
+
+### 3. Data Storage
+- ScyllaDB for high-performance storage
+- Schema optimized for time-series analytics
+- Supports efficient querying and analysis
+
+### 4. Analytics
+The analytics component provides real-time insights including:
+
+#### Data Quality Metrics
+- Total records processed
+- Null/empty value distribution
+- Data completeness analysis
+
+#### Sentiment Analysis
+- Distribution of positive/negative/neutral sentiments
+- Sentiment quality metrics
+- Cross-tabulation with countries and languages
+
+#### Geographic Insights
+- Source country distribution
+- Language distribution
+- Domain analysis
+
+#### Temporal Analysis
+- Hourly article distribution
+- Ingestion rate monitoring
+- Recent articles sampling
+
+## Monitoring and Maintenance
+
+### Log Files
+- `startup.log`: System initialization logs
+- `producer.log`: GDELT API fetching logs
+- `spark_streaming.log`: Processing logs
+- `analytics.log`: Analytics and insights logs
+
+### Health Checks
+- Component status monitoring
+- Data pipeline monitoring
+- Error rate tracking
+
+## Troubleshooting
+
+### Common Issues
+1. **Connection Issues**
+   - Verify Docker containers are running
+   - Check network connectivity
+   - Ensure correct ports are exposed
+
+2. **Data Pipeline Issues**
+   - Check Kafka topic existence
+   - Verify ScyllaDB table schema
+   - Monitor Spark streaming logs
+
+3. **Performance Issues**
+   - Monitor resource usage
+   - Check ScyllaDB write performance
+   - Verify Spark processing latency
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [GDELT Project](https://www.gdeltproject.org/) for providing the data API
+- [Hugging Face](https://huggingface.co/) for the sentiment analysis models
+- Apache Kafka, Apache Spark, and ScyllaDB communities
