@@ -750,3 +750,23 @@ KeyboardInterrupt
 2025-03-09 16:48:40,978 - INFO - Found 25 articles
 2025-03-09 16:48:41,044 - INFO - Successfully sent 25 articles to Kafka
 2025-03-09 16:48:41,044 - INFO - Sleeping for 30 seconds before next fetch
+2025-03-09 16:49:11,045 - INFO - Fetching articles for search term: climate
+2025-03-09 16:49:13,174 - INFO - Successfully fetched climate articles from GDELT
+2025-03-09 16:49:13,174 - INFO - Found 25 articles
+2025-03-09 16:49:13,234 - INFO - Successfully sent 25 articles to Kafka
+2025-03-09 16:49:13,234 - INFO - Sleeping for 30 seconds before next fetch
+2025-03-09 16:49:43,236 - INFO - Fetching articles for search term: climate
+2025-03-09 16:49:46,433 - INFO - Successfully fetched climate articles from GDELT
+2025-03-09 16:49:46,434 - INFO - Found 25 articles
+2025-03-09 16:49:46,528 - INFO - Successfully sent 25 articles to Kafka
+2025-03-09 16:49:46,528 - INFO - Sleeping for 30 seconds before next fetch
+2025-03-09 16:50:16,533 - INFO - Fetching articles for search term: climate
+2025-03-09 16:50:18,662 - INFO - Successfully fetched climate articles from GDELT
+2025-03-09 16:50:18,662 - INFO - Found 25 articles
+2025-03-09 16:50:18,776 - INFO - Successfully sent 25 articles to Kafka
+2025-03-09 16:50:18,776 - INFO - Sleeping for 30 seconds before next fetch
+2025-03-09 16:50:48,781 - INFO - Fetching articles for search term: climate
+2025-03-09 16:50:52,700 - INFO - Successfully fetched climate articles from GDELT
+2025-03-09 16:50:52,702 - INFO - Found 25 articles
+2025-03-09 16:50:52,770 - INFO - Successfully sent 25 articles to Kafka
+2025-03-09 16:50:52,770 - INFO - Sleeping for 30 seconds before next fetch

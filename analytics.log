@@ -5367,3 +5367,1694 @@ Ingestion Statistics:
 2025-03-09 16:48:57,963 - INFO - Analysis completed successfully
 2025-03-09 16:48:57,963 - INFO - ==================================================
 
+2025-03-09 16:49:07,968 - INFO - 
+==================================================
+2025-03-09 16:49:07,968 - INFO - Running analysis at 2025-03-09 16:49:07.968881
+2025-03-09 16:49:07,968 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:49:08,085 - INFO - Processed 100 rows...
+2025-03-09 16:49:08,086 - INFO - Processed 200 rows...
+2025-03-09 16:49:08,086 - INFO - Processed 300 rows...
+2025-03-09 16:49:08,086 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:49:08,086 - INFO - 
+Data Quality Report:
+2025-03-09 16:49:08,087 - INFO - Total Records: 376
+2025-03-09 16:49:08,088 - INFO - 
+Null Values by Column:
+2025-03-09 16:49:08,088 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:49:08,088 - INFO - 
+Empty Values by Column:
+2025-03-09 16:49:08,088 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:49:08,088 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:49:08,088 - INFO - Total Articles: 376
+2025-03-09 16:49:08,088 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:49:08,088 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:49:08,090 - INFO - 
+Hourly Distribution:
+2025-03-09 16:49:08,090 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:49:08,090 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:49:08,090 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:49:08,094 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:49:08,094 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:49:08,098 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:49:08,098 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:49:08,100 - INFO - 
+Top 10 Domains:
+2025-03-09 16:49:08,100 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:49:08,100 - INFO - 
+Most Recent Articles:
+2025-03-09 16:49:08,101 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:08,101 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:08,101 - INFO - Country: Peru
+2025-03-09 16:49:08,101 - INFO - Language: Spanish
+2025-03-09 16:49:08,101 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:08,101 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:08,101 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:08,101 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:08,101 - INFO - Country: Peru
+2025-03-09 16:49:08,101 - INFO - Language: Spanish
+2025-03-09 16:49:08,101 - INFO - Sentiment: POSITIVE
+2025-03-09 16:49:08,101 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:08,101 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:08,101 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:08,101 - INFO - Country: Peru
+2025-03-09 16:49:08,101 - INFO - Language: Spanish
+2025-03-09 16:49:08,101 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:08,101 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:08,101 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:49:08,101 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:08,101 - INFO - Country: China
+2025-03-09 16:49:08,101 - INFO - Language: Chinese
+2025-03-09 16:49:08,101 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:08,101 - INFO - Domain: yicai.com
+
+2025-03-09 16:49:08,101 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:08,101 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:08,101 - INFO - Country: Peru
+2025-03-09 16:49:08,101 - INFO - Language: Spanish
+2025-03-09 16:49:08,101 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:08,101 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:08,101 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:49:08,101 - INFO - Time Range: 5.77 hours
+2025-03-09 16:49:08,101 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:49:08,102 - INFO - Analysis completed successfully
+2025-03-09 16:49:08,102 - INFO - ==================================================
+
+2025-03-09 16:49:18,103 - INFO - 
+==================================================
+2025-03-09 16:49:18,103 - INFO - Running analysis at 2025-03-09 16:49:18.103887
+2025-03-09 16:49:18,103 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:49:18,174 - INFO - Processed 100 rows...
+2025-03-09 16:49:18,174 - INFO - Processed 200 rows...
+2025-03-09 16:49:18,174 - INFO - Processed 300 rows...
+2025-03-09 16:49:18,175 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:49:18,175 - INFO - 
+Data Quality Report:
+2025-03-09 16:49:18,176 - INFO - Total Records: 376
+2025-03-09 16:49:18,176 - INFO - 
+Null Values by Column:
+2025-03-09 16:49:18,176 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:49:18,176 - INFO - 
+Empty Values by Column:
+2025-03-09 16:49:18,176 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:49:18,177 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:49:18,177 - INFO - Total Articles: 376
+2025-03-09 16:49:18,177 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:49:18,177 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:49:18,178 - INFO - 
+Hourly Distribution:
+2025-03-09 16:49:18,178 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:49:18,178 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:49:18,178 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:49:18,180 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:49:18,180 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:49:18,185 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:49:18,185 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:49:18,187 - INFO - 
+Top 10 Domains:
+2025-03-09 16:49:18,187 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:49:18,188 - INFO - 
+Most Recent Articles:
+2025-03-09 16:49:18,188 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:18,188 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:18,188 - INFO - Country: Peru
+2025-03-09 16:49:18,188 - INFO - Language: Spanish
+2025-03-09 16:49:18,188 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:18,188 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:18,188 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:18,188 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:18,188 - INFO - Country: Peru
+2025-03-09 16:49:18,188 - INFO - Language: Spanish
+2025-03-09 16:49:18,188 - INFO - Sentiment: POSITIVE
+2025-03-09 16:49:18,188 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:18,188 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:18,188 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:18,188 - INFO - Country: Peru
+2025-03-09 16:49:18,188 - INFO - Language: Spanish
+2025-03-09 16:49:18,188 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:18,188 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:18,188 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:49:18,188 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:18,188 - INFO - Country: China
+2025-03-09 16:49:18,188 - INFO - Language: Chinese
+2025-03-09 16:49:18,188 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:18,189 - INFO - Domain: yicai.com
+
+2025-03-09 16:49:18,189 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:18,189 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:18,189 - INFO - Country: Peru
+2025-03-09 16:49:18,189 - INFO - Language: Spanish
+2025-03-09 16:49:18,189 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:18,189 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:18,189 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:49:18,189 - INFO - Time Range: 5.77 hours
+2025-03-09 16:49:18,189 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:49:18,189 - INFO - Analysis completed successfully
+2025-03-09 16:49:18,189 - INFO - ==================================================
+
+2025-03-09 16:49:28,194 - INFO - 
+==================================================
+2025-03-09 16:49:28,197 - INFO - Running analysis at 2025-03-09 16:49:28.197552
+2025-03-09 16:49:28,197 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:49:28,282 - INFO - Processed 100 rows...
+2025-03-09 16:49:28,282 - INFO - Processed 200 rows...
+2025-03-09 16:49:28,282 - INFO - Processed 300 rows...
+2025-03-09 16:49:28,283 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:49:28,283 - INFO - 
+Data Quality Report:
+2025-03-09 16:49:28,284 - INFO - Total Records: 376
+2025-03-09 16:49:28,284 - INFO - 
+Null Values by Column:
+2025-03-09 16:49:28,284 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:49:28,284 - INFO - 
+Empty Values by Column:
+2025-03-09 16:49:28,284 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:49:28,285 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:49:28,285 - INFO - Total Articles: 376
+2025-03-09 16:49:28,285 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:49:28,285 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:49:28,285 - INFO - 
+Hourly Distribution:
+2025-03-09 16:49:28,285 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:49:28,286 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:49:28,286 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:49:28,287 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:49:28,287 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:49:28,290 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:49:28,290 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:49:28,293 - INFO - 
+Top 10 Domains:
+2025-03-09 16:49:28,293 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:49:28,294 - INFO - 
+Most Recent Articles:
+2025-03-09 16:49:28,294 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:28,294 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:28,294 - INFO - Country: Peru
+2025-03-09 16:49:28,294 - INFO - Language: Spanish
+2025-03-09 16:49:28,295 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:28,295 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:28,295 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:28,295 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:28,295 - INFO - Country: Peru
+2025-03-09 16:49:28,295 - INFO - Language: Spanish
+2025-03-09 16:49:28,295 - INFO - Sentiment: POSITIVE
+2025-03-09 16:49:28,295 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:28,295 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:28,295 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:28,295 - INFO - Country: Peru
+2025-03-09 16:49:28,295 - INFO - Language: Spanish
+2025-03-09 16:49:28,295 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:28,295 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:28,295 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:49:28,295 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:28,295 - INFO - Country: China
+2025-03-09 16:49:28,295 - INFO - Language: Chinese
+2025-03-09 16:49:28,295 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:28,295 - INFO - Domain: yicai.com
+
+2025-03-09 16:49:28,296 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:28,296 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:28,296 - INFO - Country: Peru
+2025-03-09 16:49:28,296 - INFO - Language: Spanish
+2025-03-09 16:49:28,296 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:28,296 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:28,296 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:49:28,296 - INFO - Time Range: 5.77 hours
+2025-03-09 16:49:28,296 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:49:28,296 - INFO - Analysis completed successfully
+2025-03-09 16:49:28,296 - INFO - ==================================================
+
+2025-03-09 16:49:38,301 - INFO - 
+==================================================
+2025-03-09 16:49:38,302 - INFO - Running analysis at 2025-03-09 16:49:38.302535
+2025-03-09 16:49:38,302 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:49:38,415 - INFO - Processed 100 rows...
+2025-03-09 16:49:38,415 - INFO - Processed 200 rows...
+2025-03-09 16:49:38,416 - INFO - Processed 300 rows...
+2025-03-09 16:49:38,425 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:49:38,426 - INFO - 
+Data Quality Report:
+2025-03-09 16:49:38,427 - INFO - Total Records: 376
+2025-03-09 16:49:38,427 - INFO - 
+Null Values by Column:
+2025-03-09 16:49:38,427 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:49:38,427 - INFO - 
+Empty Values by Column:
+2025-03-09 16:49:38,427 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:49:38,428 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:49:38,428 - INFO - Total Articles: 376
+2025-03-09 16:49:38,428 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:49:38,428 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:49:38,429 - INFO - 
+Hourly Distribution:
+2025-03-09 16:49:38,429 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:49:38,429 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:49:38,429 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:49:38,431 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:49:38,431 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:49:38,435 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:49:38,435 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:49:38,438 - INFO - 
+Top 10 Domains:
+2025-03-09 16:49:38,438 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:49:38,439 - INFO - 
+Most Recent Articles:
+2025-03-09 16:49:38,439 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:38,439 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:38,439 - INFO - Country: Peru
+2025-03-09 16:49:38,439 - INFO - Language: Spanish
+2025-03-09 16:49:38,439 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:38,439 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:38,439 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:38,439 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:38,439 - INFO - Country: Peru
+2025-03-09 16:49:38,439 - INFO - Language: Spanish
+2025-03-09 16:49:38,439 - INFO - Sentiment: POSITIVE
+2025-03-09 16:49:38,439 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:38,439 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:38,439 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:38,439 - INFO - Country: Peru
+2025-03-09 16:49:38,439 - INFO - Language: Spanish
+2025-03-09 16:49:38,439 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:38,439 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:38,439 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:49:38,439 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:38,440 - INFO - Country: China
+2025-03-09 16:49:38,440 - INFO - Language: Chinese
+2025-03-09 16:49:38,440 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:38,440 - INFO - Domain: yicai.com
+
+2025-03-09 16:49:38,440 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:38,440 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:38,440 - INFO - Country: Peru
+2025-03-09 16:49:38,440 - INFO - Language: Spanish
+2025-03-09 16:49:38,440 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:38,440 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:38,440 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:49:38,440 - INFO - Time Range: 5.77 hours
+2025-03-09 16:49:38,440 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:49:38,441 - INFO - Analysis completed successfully
+2025-03-09 16:49:38,441 - INFO - ==================================================
+
+2025-03-09 16:49:48,446 - INFO - 
+==================================================
+2025-03-09 16:49:48,446 - INFO - Running analysis at 2025-03-09 16:49:48.446459
+2025-03-09 16:49:48,446 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:49:48,567 - INFO - Processed 100 rows...
+2025-03-09 16:49:48,567 - INFO - Processed 200 rows...
+2025-03-09 16:49:48,567 - INFO - Processed 300 rows...
+2025-03-09 16:49:48,567 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:49:48,567 - INFO - 
+Data Quality Report:
+2025-03-09 16:49:48,568 - INFO - Total Records: 376
+2025-03-09 16:49:48,568 - INFO - 
+Null Values by Column:
+2025-03-09 16:49:48,568 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:49:48,569 - INFO - 
+Empty Values by Column:
+2025-03-09 16:49:48,569 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:49:48,569 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:49:48,569 - INFO - Total Articles: 376
+2025-03-09 16:49:48,569 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:49:48,569 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:49:48,570 - INFO - 
+Hourly Distribution:
+2025-03-09 16:49:48,570 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:49:48,570 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:49:48,570 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:49:48,572 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:49:48,572 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:49:48,575 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:49:48,575 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:49:48,578 - INFO - 
+Top 10 Domains:
+2025-03-09 16:49:48,578 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:49:48,578 - INFO - 
+Most Recent Articles:
+2025-03-09 16:49:48,578 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:48,578 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:48,578 - INFO - Country: Peru
+2025-03-09 16:49:48,578 - INFO - Language: Spanish
+2025-03-09 16:49:48,578 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:48,579 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:48,579 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:48,579 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:48,579 - INFO - Country: Peru
+2025-03-09 16:49:48,579 - INFO - Language: Spanish
+2025-03-09 16:49:48,579 - INFO - Sentiment: POSITIVE
+2025-03-09 16:49:48,579 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:48,579 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:48,579 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:48,579 - INFO - Country: Peru
+2025-03-09 16:49:48,579 - INFO - Language: Spanish
+2025-03-09 16:49:48,579 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:48,579 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:48,579 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:49:48,579 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:48,579 - INFO - Country: China
+2025-03-09 16:49:48,579 - INFO - Language: Chinese
+2025-03-09 16:49:48,579 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:48,579 - INFO - Domain: yicai.com
+
+2025-03-09 16:49:48,579 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:48,579 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:48,579 - INFO - Country: Peru
+2025-03-09 16:49:48,579 - INFO - Language: Spanish
+2025-03-09 16:49:48,579 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:48,579 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:48,579 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:49:48,579 - INFO - Time Range: 5.77 hours
+2025-03-09 16:49:48,579 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:49:48,579 - INFO - Analysis completed successfully
+2025-03-09 16:49:48,579 - INFO - ==================================================
+
+2025-03-09 16:49:58,585 - INFO - 
+==================================================
+2025-03-09 16:49:58,585 - INFO - Running analysis at 2025-03-09 16:49:58.585574
+2025-03-09 16:49:58,585 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:49:58,696 - INFO - Processed 100 rows...
+2025-03-09 16:49:58,696 - INFO - Processed 200 rows...
+2025-03-09 16:49:58,697 - INFO - Processed 300 rows...
+2025-03-09 16:49:58,697 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:49:58,698 - INFO - 
+Data Quality Report:
+2025-03-09 16:49:58,698 - INFO - Total Records: 376
+2025-03-09 16:49:58,698 - INFO - 
+Null Values by Column:
+2025-03-09 16:49:58,698 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:49:58,699 - INFO - 
+Empty Values by Column:
+2025-03-09 16:49:58,699 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:49:58,699 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:49:58,699 - INFO - Total Articles: 376
+2025-03-09 16:49:58,699 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:49:58,699 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:49:58,700 - INFO - 
+Hourly Distribution:
+2025-03-09 16:49:58,700 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:49:58,700 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:49:58,700 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:49:58,702 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:49:58,702 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:49:58,706 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:49:58,706 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:49:58,708 - INFO - 
+Top 10 Domains:
+2025-03-09 16:49:58,708 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:49:58,708 - INFO - 
+Most Recent Articles:
+2025-03-09 16:49:58,709 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:58,709 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:58,709 - INFO - Country: Peru
+2025-03-09 16:49:58,709 - INFO - Language: Spanish
+2025-03-09 16:49:58,709 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:58,709 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:58,709 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:58,709 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:58,709 - INFO - Country: Peru
+2025-03-09 16:49:58,709 - INFO - Language: Spanish
+2025-03-09 16:49:58,709 - INFO - Sentiment: POSITIVE
+2025-03-09 16:49:58,709 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:58,709 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:58,709 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:58,709 - INFO - Country: Peru
+2025-03-09 16:49:58,709 - INFO - Language: Spanish
+2025-03-09 16:49:58,709 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:58,709 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:58,709 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:49:58,709 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:58,710 - INFO - Country: China
+2025-03-09 16:49:58,710 - INFO - Language: Chinese
+2025-03-09 16:49:58,710 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:58,710 - INFO - Domain: yicai.com
+
+2025-03-09 16:49:58,710 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:49:58,710 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:49:58,710 - INFO - Country: Peru
+2025-03-09 16:49:58,710 - INFO - Language: Spanish
+2025-03-09 16:49:58,710 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:49:58,710 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:49:58,710 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:49:58,710 - INFO - Time Range: 5.77 hours
+2025-03-09 16:49:58,710 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:49:58,711 - INFO - Analysis completed successfully
+2025-03-09 16:49:58,711 - INFO - ==================================================
+
+2025-03-09 16:50:08,716 - INFO - 
+==================================================
+2025-03-09 16:50:08,716 - INFO - Running analysis at 2025-03-09 16:50:08.716581
+2025-03-09 16:50:08,716 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:50:08,829 - INFO - Processed 100 rows...
+2025-03-09 16:50:08,829 - INFO - Processed 200 rows...
+2025-03-09 16:50:08,829 - INFO - Processed 300 rows...
+2025-03-09 16:50:08,829 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:50:08,830 - INFO - 
+Data Quality Report:
+2025-03-09 16:50:08,831 - INFO - Total Records: 376
+2025-03-09 16:50:08,831 - INFO - 
+Null Values by Column:
+2025-03-09 16:50:08,831 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:50:08,831 - INFO - 
+Empty Values by Column:
+2025-03-09 16:50:08,831 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:50:08,832 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:50:08,832 - INFO - Total Articles: 376
+2025-03-09 16:50:08,832 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:50:08,832 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:50:08,832 - INFO - 
+Hourly Distribution:
+2025-03-09 16:50:08,833 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:50:08,833 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:50:08,833 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:50:08,834 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:50:08,834 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:50:08,838 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:50:08,838 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:50:08,841 - INFO - 
+Top 10 Domains:
+2025-03-09 16:50:08,841 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:50:08,842 - INFO - 
+Most Recent Articles:
+2025-03-09 16:50:08,842 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:08,842 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:08,842 - INFO - Country: Peru
+2025-03-09 16:50:08,842 - INFO - Language: Spanish
+2025-03-09 16:50:08,842 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:08,842 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:08,842 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:08,842 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:08,842 - INFO - Country: Peru
+2025-03-09 16:50:08,842 - INFO - Language: Spanish
+2025-03-09 16:50:08,842 - INFO - Sentiment: POSITIVE
+2025-03-09 16:50:08,842 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:08,842 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:08,842 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:08,842 - INFO - Country: Peru
+2025-03-09 16:50:08,842 - INFO - Language: Spanish
+2025-03-09 16:50:08,842 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:08,842 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:08,842 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:50:08,842 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:08,842 - INFO - Country: China
+2025-03-09 16:50:08,842 - INFO - Language: Chinese
+2025-03-09 16:50:08,843 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:08,843 - INFO - Domain: yicai.com
+
+2025-03-09 16:50:08,843 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:08,843 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:08,843 - INFO - Country: Peru
+2025-03-09 16:50:08,843 - INFO - Language: Spanish
+2025-03-09 16:50:08,843 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:08,843 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:08,843 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:50:08,843 - INFO - Time Range: 5.77 hours
+2025-03-09 16:50:08,843 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:50:08,843 - INFO - Analysis completed successfully
+2025-03-09 16:50:08,843 - INFO - ==================================================
+
+2025-03-09 16:50:18,846 - INFO - 
+==================================================
+2025-03-09 16:50:18,846 - INFO - Running analysis at 2025-03-09 16:50:18.846696
+2025-03-09 16:50:18,846 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:50:18,974 - INFO - Processed 100 rows...
+2025-03-09 16:50:18,974 - INFO - Processed 200 rows...
+2025-03-09 16:50:18,974 - INFO - Processed 300 rows...
+2025-03-09 16:50:18,975 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:50:18,975 - INFO - 
+Data Quality Report:
+2025-03-09 16:50:18,976 - INFO - Total Records: 376
+2025-03-09 16:50:18,976 - INFO - 
+Null Values by Column:
+2025-03-09 16:50:18,976 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:50:18,976 - INFO - 
+Empty Values by Column:
+2025-03-09 16:50:18,976 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:50:18,977 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:50:18,977 - INFO - Total Articles: 376
+2025-03-09 16:50:18,977 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:50:18,977 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:50:18,978 - INFO - 
+Hourly Distribution:
+2025-03-09 16:50:18,978 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:50:18,978 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:50:18,978 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:50:18,980 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:50:18,980 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:50:18,984 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:50:18,984 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:50:18,987 - INFO - 
+Top 10 Domains:
+2025-03-09 16:50:18,987 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:50:18,987 - INFO - 
+Most Recent Articles:
+2025-03-09 16:50:18,987 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:18,987 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:18,987 - INFO - Country: Peru
+2025-03-09 16:50:18,987 - INFO - Language: Spanish
+2025-03-09 16:50:18,987 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:18,987 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:18,988 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:18,988 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:18,988 - INFO - Country: Peru
+2025-03-09 16:50:18,988 - INFO - Language: Spanish
+2025-03-09 16:50:18,988 - INFO - Sentiment: POSITIVE
+2025-03-09 16:50:18,988 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:18,988 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:18,988 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:18,988 - INFO - Country: Peru
+2025-03-09 16:50:18,988 - INFO - Language: Spanish
+2025-03-09 16:50:18,988 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:18,988 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:18,988 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:50:18,988 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:18,988 - INFO - Country: China
+2025-03-09 16:50:18,988 - INFO - Language: Chinese
+2025-03-09 16:50:18,988 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:18,988 - INFO - Domain: yicai.com
+
+2025-03-09 16:50:18,988 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:18,988 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:18,988 - INFO - Country: Peru
+2025-03-09 16:50:18,988 - INFO - Language: Spanish
+2025-03-09 16:50:18,988 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:18,988 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:18,988 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:50:18,988 - INFO - Time Range: 5.77 hours
+2025-03-09 16:50:18,988 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:50:18,989 - INFO - Analysis completed successfully
+2025-03-09 16:50:18,989 - INFO - ==================================================
+
+2025-03-09 16:50:28,994 - INFO - 
+==================================================
+2025-03-09 16:50:28,994 - INFO - Running analysis at 2025-03-09 16:50:28.994645
+2025-03-09 16:50:28,994 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:50:29,092 - INFO - Processed 100 rows...
+2025-03-09 16:50:29,092 - INFO - Processed 200 rows...
+2025-03-09 16:50:29,092 - INFO - Processed 300 rows...
+2025-03-09 16:50:29,092 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:50:29,093 - INFO - 
+Data Quality Report:
+2025-03-09 16:50:29,094 - INFO - Total Records: 376
+2025-03-09 16:50:29,094 - INFO - 
+Null Values by Column:
+2025-03-09 16:50:29,094 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:50:29,094 - INFO - 
+Empty Values by Column:
+2025-03-09 16:50:29,094 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:50:29,095 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:50:29,095 - INFO - Total Articles: 376
+2025-03-09 16:50:29,095 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:50:29,095 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:50:29,096 - INFO - 
+Hourly Distribution:
+2025-03-09 16:50:29,096 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:50:29,096 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:50:29,096 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:50:29,098 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:50:29,098 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:50:29,104 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:50:29,104 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:50:29,107 - INFO - 
+Top 10 Domains:
+2025-03-09 16:50:29,108 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:50:29,108 - INFO - 
+Most Recent Articles:
+2025-03-09 16:50:29,108 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:29,108 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:29,109 - INFO - Country: Peru
+2025-03-09 16:50:29,109 - INFO - Language: Spanish
+2025-03-09 16:50:29,109 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:29,109 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:29,109 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:29,109 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:29,109 - INFO - Country: Peru
+2025-03-09 16:50:29,109 - INFO - Language: Spanish
+2025-03-09 16:50:29,109 - INFO - Sentiment: POSITIVE
+2025-03-09 16:50:29,109 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:29,109 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:29,109 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:29,109 - INFO - Country: Peru
+2025-03-09 16:50:29,109 - INFO - Language: Spanish
+2025-03-09 16:50:29,109 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:29,109 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:29,109 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:50:29,109 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:29,109 - INFO - Country: China
+2025-03-09 16:50:29,109 - INFO - Language: Chinese
+2025-03-09 16:50:29,109 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:29,109 - INFO - Domain: yicai.com
+
+2025-03-09 16:50:29,109 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:29,109 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:29,110 - INFO - Country: Peru
+2025-03-09 16:50:29,110 - INFO - Language: Spanish
+2025-03-09 16:50:29,110 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:29,110 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:29,110 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:50:29,110 - INFO - Time Range: 5.77 hours
+2025-03-09 16:50:29,110 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:50:29,110 - INFO - Analysis completed successfully
+2025-03-09 16:50:29,110 - INFO - ==================================================
+
+2025-03-09 16:50:39,116 - INFO - 
+==================================================
+2025-03-09 16:50:39,117 - INFO - Running analysis at 2025-03-09 16:50:39.116898
+2025-03-09 16:50:39,117 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:50:39,219 - INFO - Processed 100 rows...
+2025-03-09 16:50:39,219 - INFO - Processed 200 rows...
+2025-03-09 16:50:39,220 - INFO - Processed 300 rows...
+2025-03-09 16:50:39,220 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:50:39,221 - INFO - 
+Data Quality Report:
+2025-03-09 16:50:39,222 - INFO - Total Records: 376
+2025-03-09 16:50:39,222 - INFO - 
+Null Values by Column:
+2025-03-09 16:50:39,222 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:50:39,223 - INFO - 
+Empty Values by Column:
+2025-03-09 16:50:39,223 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:50:39,223 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:50:39,223 - INFO - Total Articles: 376
+2025-03-09 16:50:39,223 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:50:39,223 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:50:39,226 - INFO - 
+Hourly Distribution:
+2025-03-09 16:50:39,226 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:50:39,226 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:50:39,227 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:50:39,230 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:50:39,231 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:50:39,235 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:50:39,235 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:50:39,242 - INFO - 
+Top 10 Domains:
+2025-03-09 16:50:39,242 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:50:39,242 - INFO - 
+Most Recent Articles:
+2025-03-09 16:50:39,243 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:39,243 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:39,243 - INFO - Country: Peru
+2025-03-09 16:50:39,243 - INFO - Language: Spanish
+2025-03-09 16:50:39,243 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:39,243 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:39,243 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:39,243 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:39,243 - INFO - Country: Peru
+2025-03-09 16:50:39,243 - INFO - Language: Spanish
+2025-03-09 16:50:39,243 - INFO - Sentiment: POSITIVE
+2025-03-09 16:50:39,243 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:39,243 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:39,243 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:39,243 - INFO - Country: Peru
+2025-03-09 16:50:39,243 - INFO - Language: Spanish
+2025-03-09 16:50:39,243 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:39,243 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:39,243 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:50:39,243 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:39,243 - INFO - Country: China
+2025-03-09 16:50:39,243 - INFO - Language: Chinese
+2025-03-09 16:50:39,243 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:39,243 - INFO - Domain: yicai.com
+
+2025-03-09 16:50:39,243 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:39,243 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:39,243 - INFO - Country: Peru
+2025-03-09 16:50:39,244 - INFO - Language: Spanish
+2025-03-09 16:50:39,244 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:39,244 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:39,244 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:50:39,244 - INFO - Time Range: 5.77 hours
+2025-03-09 16:50:39,244 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:50:39,244 - INFO - Analysis completed successfully
+2025-03-09 16:50:39,244 - INFO - ==================================================
+
+2025-03-09 16:50:49,249 - INFO - 
+==================================================
+2025-03-09 16:50:49,250 - INFO - Running analysis at 2025-03-09 16:50:49.250728
+2025-03-09 16:50:49,250 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:50:49,362 - INFO - Processed 100 rows...
+2025-03-09 16:50:49,363 - INFO - Processed 200 rows...
+2025-03-09 16:50:49,363 - INFO - Processed 300 rows...
+2025-03-09 16:50:49,363 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:50:49,365 - INFO - 
+Data Quality Report:
+2025-03-09 16:50:49,366 - INFO - Total Records: 376
+2025-03-09 16:50:49,366 - INFO - 
+Null Values by Column:
+2025-03-09 16:50:49,366 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:50:49,366 - INFO - 
+Empty Values by Column:
+2025-03-09 16:50:49,366 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:50:49,366 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:50:49,367 - INFO - Total Articles: 376
+2025-03-09 16:50:49,367 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:50:49,367 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:50:49,367 - INFO - 
+Hourly Distribution:
+2025-03-09 16:50:49,367 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:50:49,368 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:50:49,368 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:50:49,372 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:50:49,373 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:50:49,380 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:50:49,380 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:50:49,383 - INFO - 
+Top 10 Domains:
+2025-03-09 16:50:49,383 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:50:49,384 - INFO - 
+Most Recent Articles:
+2025-03-09 16:50:49,384 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:49,384 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:49,384 - INFO - Country: Peru
+2025-03-09 16:50:49,384 - INFO - Language: Spanish
+2025-03-09 16:50:49,384 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:49,384 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:49,384 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:49,384 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:49,384 - INFO - Country: Peru
+2025-03-09 16:50:49,384 - INFO - Language: Spanish
+2025-03-09 16:50:49,384 - INFO - Sentiment: POSITIVE
+2025-03-09 16:50:49,384 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:49,385 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:49,385 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:49,385 - INFO - Country: Peru
+2025-03-09 16:50:49,385 - INFO - Language: Spanish
+2025-03-09 16:50:49,385 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:49,385 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:49,385 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:50:49,385 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:49,385 - INFO - Country: China
+2025-03-09 16:50:49,385 - INFO - Language: Chinese
+2025-03-09 16:50:49,385 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:49,385 - INFO - Domain: yicai.com
+
+2025-03-09 16:50:49,385 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:49,385 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:49,385 - INFO - Country: Peru
+2025-03-09 16:50:49,385 - INFO - Language: Spanish
+2025-03-09 16:50:49,385 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:49,385 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:49,385 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:50:49,385 - INFO - Time Range: 5.77 hours
+2025-03-09 16:50:49,385 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:50:49,386 - INFO - Analysis completed successfully
+2025-03-09 16:50:49,386 - INFO - ==================================================
+
+2025-03-09 16:50:59,391 - INFO - 
+==================================================
+2025-03-09 16:50:59,392 - INFO - Running analysis at 2025-03-09 16:50:59.392292
+2025-03-09 16:50:59,392 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:50:59,502 - INFO - Processed 100 rows...
+2025-03-09 16:50:59,505 - INFO - Processed 200 rows...
+2025-03-09 16:50:59,506 - INFO - Processed 300 rows...
+2025-03-09 16:50:59,506 - INFO - Retrieved 376 articles from the last 24 hours
+2025-03-09 16:50:59,508 - INFO - 
+Data Quality Report:
+2025-03-09 16:50:59,509 - INFO - Total Records: 376
+2025-03-09 16:50:59,509 - INFO - 
+Null Values by Column:
+2025-03-09 16:50:59,509 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:50:59,509 - INFO - 
+Empty Values by Column:
+2025-03-09 16:50:59,509 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      30
+processed_at      0
+dtype: int64
+2025-03-09 16:50:59,511 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:50:59,511 - INFO - Total Articles: 376
+2025-03-09 16:50:59,511 - INFO - Valid Sentiments: 375 (100.0%)
+2025-03-09 16:50:59,511 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:50:59,512 - INFO - 
+Hourly Distribution:
+2025-03-09 16:50:59,512 - INFO - hour
+11      1
+16    375
+dtype: int64
+2025-03-09 16:50:59,512 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:50:59,512 - INFO - sentiment
+NEGATIVE    330
+POSITIVE     45
+test          1
+Name: count, dtype: int64
+2025-03-09 16:50:59,514 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:50:59,514 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                15         0     0
+Germany              15         0     0
+Ghana                 0        15     0
+Indonesia            60         0     0
+None                  0         0     1
+Peru                240        30     0
+2025-03-09 16:50:59,519 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:50:59,519 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           15         0     0
+English            0        15     0
+German            15         0     0
+Indonesian        60         0     0
+None               0         0     1
+Spanish          240        30     0
+2025-03-09 16:50:59,521 - INFO - 
+Top 10 Domains:
+2025-03-09 16:50:59,521 - INFO - domain
+larepublica.pe            270
+lestari.kompas.com         15
+esgnow.republika.co.id     15
+ug.edu.gh                  15
+antaranews.com             15
+shz.de                     15
+liputan6.com               15
+yicai.com                  15
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:50:59,521 - INFO - 
+Most Recent Articles:
+2025-03-09 16:50:59,521 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:59,521 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:59,521 - INFO - Country: Peru
+2025-03-09 16:50:59,521 - INFO - Language: Spanish
+2025-03-09 16:50:59,521 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:59,521 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:59,521 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:59,522 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:59,522 - INFO - Country: Peru
+2025-03-09 16:50:59,522 - INFO - Language: Spanish
+2025-03-09 16:50:59,522 - INFO - Sentiment: POSITIVE
+2025-03-09 16:50:59,522 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:59,522 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:59,522 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:59,522 - INFO - Country: Peru
+2025-03-09 16:50:59,522 - INFO - Language: Spanish
+2025-03-09 16:50:59,522 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:59,522 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:59,522 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:50:59,522 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:59,522 - INFO - Country: China
+2025-03-09 16:50:59,522 - INFO - Language: Chinese
+2025-03-09 16:50:59,522 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:59,522 - INFO - Domain: yicai.com
+
+2025-03-09 16:50:59,522 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Chicago este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:50:59,522 - INFO - Date: 2025-03-09 16:48:12.966000
+2025-03-09 16:50:59,522 - INFO - Country: Peru
+2025-03-09 16:50:59,522 - INFO - Language: Spanish
+2025-03-09 16:50:59,522 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:50:59,522 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:50:59,522 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:50:59,522 - INFO - Time Range: 5.77 hours
+2025-03-09 16:50:59,522 - INFO - Average Ingestion Rate: 65.20 articles/hour
+2025-03-09 16:50:59,522 - INFO - Analysis completed successfully
+2025-03-09 16:50:59,522 - INFO - ==================================================
+
+2025-03-09 16:51:09,527 - INFO - 
+==================================================
+2025-03-09 16:51:09,528 - INFO - Running analysis at 2025-03-09 16:51:09.528052
+2025-03-09 16:51:09,528 - INFO - Executing query for articles in the last 24 hours
+2025-03-09 16:51:09,648 - INFO - Processed 100 rows...
+2025-03-09 16:51:09,648 - INFO - Processed 200 rows...
+2025-03-09 16:51:09,649 - INFO - Processed 300 rows...
+2025-03-09 16:51:09,649 - INFO - Processed 400 rows...
+2025-03-09 16:51:09,649 - INFO - Retrieved 401 articles from the last 24 hours
+2025-03-09 16:51:09,649 - INFO - 
+Data Quality Report:
+2025-03-09 16:51:09,650 - INFO - Total Records: 401
+2025-03-09 16:51:09,650 - INFO - 
+Null Values by Column:
+2025-03-09 16:51:09,650 - INFO - url              0
+title            0
+seendate         0
+domain           0
+language         0
+sourcecountry    0
+sentiment        0
+socialimage      0
+processed_at     0
+dtype: int64
+2025-03-09 16:51:09,650 - INFO - 
+Empty Values by Column:
+2025-03-09 16:51:09,650 - INFO - url               0
+title             0
+seendate          0
+domain            0
+language          0
+sourcecountry     0
+sentiment         0
+socialimage      32
+processed_at      0
+dtype: int64
+2025-03-09 16:51:09,651 - INFO - 
+Sentiment Analysis Quality:
+2025-03-09 16:51:09,651 - INFO - Total Articles: 401
+2025-03-09 16:51:09,651 - INFO - Valid Sentiments: 400 (100.0%)
+2025-03-09 16:51:09,651 - INFO - Unknown Sentiments: 0 (0.0%)
+2025-03-09 16:51:09,652 - INFO - 
+Hourly Distribution:
+2025-03-09 16:51:09,652 - INFO - hour
+11      1
+16    400
+dtype: int64
+2025-03-09 16:51:09,652 - INFO - 
+Sentiment Distribution:
+2025-03-09 16:51:09,652 - INFO - sentiment
+NEGATIVE    352
+POSITIVE     48
+test          1
+Name: count, dtype: int64
+2025-03-09 16:51:09,653 - INFO - 
+Sentiment Distribution by Country (Top 10):
+2025-03-09 16:51:09,653 - INFO - sentiment      NEGATIVE  POSITIVE  test
+sourcecountry                          
+China                16         0     0
+Germany              16         0     0
+Ghana                 0        16     0
+Indonesia            64         0     0
+None                  0         0     1
+Peru                256        32     0
+2025-03-09 16:51:09,658 - INFO - 
+Sentiment Distribution by Language (Top 10):
+2025-03-09 16:51:09,658 - INFO - sentiment   NEGATIVE  POSITIVE  test
+language                            
+Chinese           16         0     0
+English            0        16     0
+German            16         0     0
+Indonesian        64         0     0
+None               0         0     1
+Spanish          256        32     0
+2025-03-09 16:51:09,660 - INFO - 
+Top 10 Domains:
+2025-03-09 16:51:09,660 - INFO - domain
+larepublica.pe            288
+lestari.kompas.com         16
+esgnow.republika.co.id     16
+ug.edu.gh                  16
+antaranews.com             16
+shz.de                     16
+liputan6.com               16
+yicai.com                  16
+None                        1
+Name: count, dtype: int64
+2025-03-09 16:51:09,661 - INFO - 
+Most Recent Articles:
+2025-03-09 16:51:09,661 - INFO - Title: Clima de HOY en Illinois : pronóstico del tiempo en Rockford este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:51:09,661 - INFO - Date: 2025-03-09 16:51:03.055000
+2025-03-09 16:51:09,661 - INFO - Country: Peru
+2025-03-09 16:51:09,661 - INFO - Language: Spanish
+2025-03-09 16:51:09,661 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:51:09,661 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:51:09,661 - INFO - Title: Clima de HOY en Nueva York : pronóstico del tiempo en New York City este 3 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:51:09,661 - INFO - Date: 2025-03-09 16:51:03.055000
+2025-03-09 16:51:09,661 - INFO - Country: Peru
+2025-03-09 16:51:09,661 - INFO - Language: Spanish
+2025-03-09 16:51:09,661 - INFO - Sentiment: POSITIVE
+2025-03-09 16:51:09,661 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:51:09,661 - INFO - Title: Pengetahuan Perubahan Iklim : Siapa yang Disebut Migran Iklim ? 
+2025-03-09 16:51:09,661 - INFO - Date: 2025-03-09 16:51:03.055000
+2025-03-09 16:51:09,661 - INFO - Country: Indonesia
+2025-03-09 16:51:09,661 - INFO - Language: Indonesian
+2025-03-09 16:51:09,661 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:51:09,661 - INFO - Domain: lestari.kompas.com
+
+2025-03-09 16:51:09,662 - INFO - Title: Clima de HOY en Texas : pronóstico del tiempo en San Antonio este 4 de marzo , según National Weather Service | pronóstico del tiempo de mañana | LRTMUSC | Estados Unidos
+2025-03-09 16:51:09,662 - INFO - Date: 2025-03-09 16:51:03.055000
+2025-03-09 16:51:09,662 - INFO - Country: Peru
+2025-03-09 16:51:09,662 - INFO - Language: Spanish
+2025-03-09 16:51:09,662 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:51:09,662 - INFO - Domain: larepublica.pe
+
+2025-03-09 16:51:09,662 - INFO - Title: 曾刚 ： 商业银行服务气候投融资的挑战及对策建议
+2025-03-09 16:51:09,662 - INFO - Date: 2025-03-09 16:51:03.055000
+2025-03-09 16:51:09,662 - INFO - Country: China
+2025-03-09 16:51:09,662 - INFO - Language: Chinese
+2025-03-09 16:51:09,662 - INFO - Sentiment: NEGATIVE
+2025-03-09 16:51:09,662 - INFO - Domain: yicai.com
+
+2025-03-09 16:51:09,662 - INFO - 
+Ingestion Statistics:
+2025-03-09 16:51:09,662 - INFO - Time Range: 5.81 hours
+2025-03-09 16:51:09,662 - INFO - Average Ingestion Rate: 68.97 articles/hour
+2025-03-09 16:51:09,662 - INFO - Analysis completed successfully
+2025-03-09 16:51:09,662 - INFO - ==================================================
+
