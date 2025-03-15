@@ -525,41 +525,37 @@ class GeopoliticsAnalytics:
             logger.error(f"Error during cleanup: {e}")
 
 def main():
-    try:
-        parser = argparse.ArgumentParser(description='ScyllaDB Analytics Tool')
-        parser.add_argument('--performance-mode', action='store_true',
-                          help='Run only performance metrics analysis')
-        parser.add_argument('--interval', type=int, default=10,
-                          help='Analysis interval in seconds (default: 10)')
-        parser.add_argument('--batch-size', type=int, default=50,
-                          help='Batch size for write operations (default: 50)')
-        parser.add_argument('--concurrent-ops', type=int, default=20,
-                          help='Number of concurrent operations to test (default: 20)')
-        parser.add_argument('--duration', type=int, default=0,
-                          help='Duration in seconds to run the analysis (0 for infinite, default: 0)')
-        args = parser.parse_args()
-        
-        analytics = GeopoliticsAnalytics(
-            batch_size=args.batch_size,
-            concurrent_ops=args.concurrent_ops
-        )
-        
-        if args.duration > 0:
-            logger.info(f"Running analysis for {args.duration} seconds")
-            start_time = time.time()
-            while time.time() - start_time < args.duration:
-                analytics.run_continuous_analysis(
-                    interval_seconds=args.interval,
-                    performance_mode=args.performance_mode
-                )
+    parser = argparse.ArgumentParser(description='ScyllaDB Analytics')
+    parser.add_argument('--performance-mode', action='store_true', help='Run in performance testing mode')
+    parser.add_argument('--interval', type=int, default=5, help='Interval between performance checks in seconds')
+    parser.add_argument('--batch-size', type=int, default=50, help='Batch size for write operations')
+    parser.add_argument('--concurrent-ops', type=int, default=20, help='Number of concurrent operations')
+    parser.add_argument('--duration', type=int, default=60, help='Duration of performance test in seconds')
+    parser.add_argument('--check-data', action='store_true', help='Check recent data in ScyllaDB')
+    args = parser.parse_args()
+
+    analytics = GeopoliticsAnalytics(batch_size=args.batch_size, concurrent_ops=args.concurrent_ops)
+
+    if args.check_data:
+        logger.info("Checking recent data in ScyllaDB...")
+        articles = analytics.get_recent_articles(hours=1)  # Check last hour
+        if articles:
+            logger.info(f"Found {len(articles)} articles in the last hour")
+            logger.info("\nMost recent articles:")
+            for article in sorted(articles, key=lambda x: x['processed_at'], reverse=True)[:5]:
+                logger.info(f"Title: {article['title']}")
+                logger.info(f"Processed at: {article['processed_at']}")
+                logger.info(f"Sentiment: {article['sentiment']}")
+                logger.info("---")
         else:
-            analytics.run_continuous_analysis(
-                interval_seconds=args.interval,
-                performance_mode=args.performance_mode
-            )
-    except Exception as e:
-        logger.error(f"Error in main: {e}", exc_info=True)
-        raise
+            logger.warning("No articles found in the last hour")
+        return
+
+    if args.performance_mode:
+        logger.info("Running in performance mode...")
+        analytics.get_performance_metrics()
+    else:
+        analytics.analyze_data()
 
 if __name__ == "__main__":
     main() 
